@@ -1,0 +1,104 @@
+<com.zerobranch.layout.SwipeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:draggedItem="@id/dragitem"
+    app:isContinuousSwipe="true"
+    app:leftItem="@id/swipe_layout"
+    app:rightItem="@id/itemshow_ic_delete"
+    app:swipeDirection="right"
+    tools:ignore="ExtraText">
+
+    <!-- Rest of your layout code -->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemshow_ic_delete"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="16dp">
+        <ImageView
+            android:id="@+id/bt_Delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shap_delete_ic"
+            android:src="@drawable/delete_task" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dragitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="8dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/shape_for_item_task">
+
+        <View
+            android:id="@+id/linee"
+            android:layout_width="5dp"
+            android:layout_height="117dp"
+            android:layout_marginStart="12dp"
+            android:background="@color/Blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/title_item_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/checkbox_one_item"
+            app:layout_constraintStart_toEndOf="@id/linee"
+            app:layout_constraintTop_toTopOf="@id/linee"
+            tools:text="tittle task" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_alarm"
+            android:text="10:26"
+            app:layout_constraintStart_toStartOf="@id/title_item_one"
+            app:layout_constraintTop_toBottomOf="@id/title_item_one" />
+
+        <ImageView
+            android:id="@+id/checkbox_one_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/image_cheak_box"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/done_text_one_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="Done !"
+            android:textColor="@color/Green"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.zerobranch.layout.SwipeLayout>

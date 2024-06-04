@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TodoApp2</string>
+    <string-array name="language_List"
+        >
+        <item>English</item>
+        <item>Arabic</item>
+    </string-array>
+    <string-array name="ModeApp">
+        <item>Light mode</item>
+        <item>Dark mode</item>
+    </string-array>
+</resources>
